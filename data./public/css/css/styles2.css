@@ -1,0 +1,116 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif; /* استخدام خط عربي جميل */
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    direction: rtl; /* لأن المحتوى بالعربية */
+    background-color: #f4f4f4;
+    color: #333;
+}
+  
+/* ====== قسم تعديل البيانات (Edit Section) ====== */
+.edit-section {
+    max-width: 1400px; /* تكبير العرض */
+    margin: 100px auto; /* زيادة المسافة من الأعلى */
+    padding: 50px; /* زيادة الحشو */
+    background-color: #fff;
+    border-radius: 20px; /* زيادة التدوير في الحواف */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); /* زيادة تأثير الظل */
+}
+  
+.edit-section h2 {
+    font-size: 3.5rem; /* تكبير حجم العنوان */
+    margin-bottom: 40px; /* زيادة المسافة أسفل العنوان */
+    text-align: center;
+    color: #222;
+}
+  
+.edit-section label {
+    font-size: 1.4rem; /* زيادة حجم النص */
+    color: #555;
+    display: block;
+    margin-bottom: 15px; /* زيادة المسافة أسفل النص */
+}
+  
+.edit-section input, .edit-section textarea {
+    width: 100%;
+    padding: 20px; /* زيادة الحشو داخل الحقول */
+    font-size: 1.6rem; /* زيادة حجم الخط */
+    margin-bottom: 25px; /* زيادة المسافة بين الحقول */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* زيادة التدوير في الحواف */
+    box-sizing: border-box;
+    color: #333;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل تحت الحقول */
+}
+  
+.edit-section textarea {
+    resize: vertical;
+    min-height: 180px; /* زيادة الحد الأدنى للارتفاع */
+}
+  
+.edit-section button {
+    padding: 20px 30px; /* زيادة الحشو داخل الأزرار */
+    font-size: 24px; /* زيادة حجم الخط داخل الأزرار */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px; /* زيادة التدوير في الأزرار */
+    transition: all 0.3s ease;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* زيادة الظل تحت الأزرار */
+    background: linear-gradient(135deg, #9999a6, #000000);
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+}
+  
+.edit-section button:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* زيادة تأثير الظل عند التمرير */
+    transform: translateY(-4px); /* زيادة التأثير عند التمرير */
+}
+  
+.edit-section button:active {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* زيادة التأثير عند الضغط */
+    transform: translateY(4px);
+}
+
+/* تحسين التنسيق للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .edit-section {
+        width: 85%; /* تكبير العرض ليأخذ مساحة أكبر على الشاشة */
+        padding: 60px 80px; /* زيادة الحشو ليكون أكثر راحة */
+        box-shadow: 0 0 60px rgba(0, 0, 0, 0.5); /* زيادة الظل */
+        margin: 50px auto; /* زيادة المسافة بين المحتوى وحواف الشاشة */
+    }
+  
+    .edit-section h2 {
+        font-size: 5rem; /* تكبير العنوان بشكل أكبر */
+        margin-bottom: 60px; /* زيادة المسافة أسفل العنوان */
+    }
+  
+    .edit-section label {
+        font-size: 2.2rem; /* تكبير النصوص بشكل أكبر */
+        margin-bottom: 25px; /* زيادة المسافة بين النصوص */
+    }
+  
+    .edit-section input, .edit-section textarea {
+        font-size: 2.2rem; /* تكبير النص داخل الحقول */
+        padding: 30px; /* زيادة الحشو داخل الحقول */
+        box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5); /* زيادة الظل تحت الحقول */
+        margin-bottom: 35px; /* زيادة المسافة بين الحقول */
+    }
+  
+    .edit-section button {
+        font-size: 36px; /* تكبير الخط داخل الأزرار بشكل أكبر */
+        padding: 30px 40px; /* زيادة الحشو داخل الأزرار */
+        width: 100%; /* جعل الزر بعرض كامل */
+    }
+}

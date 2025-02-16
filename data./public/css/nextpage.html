@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تعديل بيانات الشهيد</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+  <section class="edit-section">
+    <h2>تعديل بيانات الشهيد</h2>
+    <form id="edit-form" onsubmit="return handleSubmit()">
+      <label for="name">الاسم:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">العمر:</label>
+      <input type="number" id="age" name="age" required min="1" max="100">
+
+      <label for="city">المحافظة:</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="cause">طريقة الاستشهاد:</label>
+      <textarea id="cause" name="cause" required></textarea>
+
+      <button type="submit">💾 حفظ التعديلات</button>
+    </form>
+  
+  </section>
+
+  <script>
+    // دالة للتحقق من العمر
+    function handleSubmit() {
+      const age = document.getElementById('age').value;
+      if (age < 1 || age > 100) {
+        alert('العمر يجب أن يكون بين 1 و 100 سنة.');
+        return false;
+      }
+      
+      // تنفيذ عملية الحفظ هنا (مثلاً إرسال البيانات إلى الخادم أو حفظها محلياً)
+      // بعد الحفظ، إعادة التوجيه إلى الصفحة الرئيسية
+      alert('تم حفظ التعديلات بنجاح!');
+      window.location.href = 'index.html';  // إعادة التوجيه إلى الصفحة الرئيسية بعد الحفظ
+
+      return false;  // لمنع إرسال النموذج الفعلي (يمكنك تغييره إذا كنت تستخدم الخادم)
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

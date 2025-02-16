@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif; /* استخدام خط عربي جميل */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    direction: rtl; /* لأن المحتوى بالعربية */
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* ====== قسم الهيدر (Hero Section) ====== */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: url("6576.jpg") center/cover no-repeat;
+  }
+  
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .hero-section .overlay h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero-section .overlay p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ====== قسم البطاقات ====== */
+  .cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card h2 {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    color: #222;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    padding: 0 15px 15px;
+    color: #555;
+  }
+  
+  /* ====== قسم المعلومات ====== */
+  .info-section {
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .info-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #222;
+  }
+  
+  .info-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* ====== قسم لماذا هذا الجهد ====== */
+  .about-section {
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: right;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #222;
+    text-align: center;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* ====== تنسيق الجدول ====== */
+  .table-container {
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+  
+  .table-container h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  table thead {
+    background-color: #eee;
+  }
+  
+  table thead th {
+    padding: 10px;
+    text-align: center;
+    color: #333;
+  }
+  
+  table tbody td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* ====== الفوتر ====== */
+  .footer {
+    color: #555;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .footer img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #222;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .chart-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .chart-container h3 {
+    margin-bottom: 20px; /* إضافة مساحة بين العنوان والصورة */
+  }
+  
+  .chart-img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .9); /* إضافة الظل للصورة */
+    border-radius: 8px; /* يمكنك إضافة هذا لإعطاء الصورة زوايا دائرية */
+  }
+  
+  /* ====== تحسين التنسيق للأجهزة المحمولة ====== */
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 120px; /* تقليص الارتفاع */
+    }
+  
+    .hero-section .overlay h1 {
+      font-size: 1.8rem;
+    }
+    
+    .hero-section .overlay p {
+      font-size: 1rem;
+    }
+  
+    .cards-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; /* تقليل الفجوات بين البطاقات */
+    }
+  
+    .card {
+      width: 90%;
+      margin-bottom: 15px; /* تقليل المسافة بين البطاقات */
+    }
+  
+    .info-section, .about-section {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    .info-section h2, .about-section h2 {
+      font-size: 1.5rem; /* تقليل حجم العنوان */
+    }
+  
+    .info-section p, .about-section p {
+      font-size: 0.9rem; /* تقليل حجم النص */
+    }
+  
+    .footer img {
+      width: 100%; /* جعل الصورة تتناسب مع الشاشة */
+      max-height: auto;
+    }
+  
+    .chart-img {
+      max-width: 90%; /* تقليل عرض الصورة */
+      margin: 0 auto;
+    }
+  
+    button {
+      width: 100%; /* جعل الأزرار تأخذ كامل العرض */
+      padding: 12px 0; /* تحسين الحشو للأزرار */
+    }
+  }
+               
+  
+  
+  
+  button:first-child {
+    background: linear-gradient(135deg, #f8c471, #e67e22); /* تدرج ألوان دافئة */
+    color: white;
+    border: 2px solid #d35400; /* حدود أنيقة بلون البرتقالي الداكن */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 15px 30px; /* زيادة الحجم */
+    border-radius: 25px; /* جعل الحواف دائرية */
+  }
+  
+  button:last-child {
+    background: linear-gradient(135deg, #2c3e50, #000); /* تدرج ألوان أسود أنيق */
+    color: white;
+    border: 2px solid #34495e; /* حدود داكنة أنيقة */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 10px 15px; /* زيادة الحجم */
+    border-radius: 25px; /* جعل الحواف دائرية */
+  }
+  
+  button:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-4px); /* رفع الزر قليلاً عند التحويم */
+  }
+  
+  button:active {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(2px); /* تأثير الضغط */
+  }
+  
